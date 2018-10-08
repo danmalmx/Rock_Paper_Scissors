@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="js/rbs.js"></script>
+    <style src=""></style>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <title>Rock Paper Scissor</title>
 </head>
-<body>
+<body class ="bg-yellow">
     <div class="container mx-auto bg-yellow align-center">     
         <h1>Let's play Rock, Papers, Scissors<br>Can you beat the computer</h1><br>    
-        <select id="myChoice" onchange="RBS()" class="content-center">
+        <select id="myChoice" onchange="RBS()">
             <option>Your choice, player!</option>
             <option value="rock">Rock</option>
             <option value="paper">Paper</option>
@@ -23,7 +25,7 @@
         <div class="mb-4"></div> 
         <h4 class="ml-4 mb-4">Computers choice:</h4>
         <h4 class="flex mt-4" id="cchoice"></h4>    
+        <h3 class="mt-5 ml-2 p-6"><h3 id="winner"></h3>
     </div>
-    <h3 class="ml-2 p-6">And the winner is <h3 id="winner"></h3>
 </body>
 </html>
