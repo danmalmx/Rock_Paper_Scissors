@@ -29,22 +29,51 @@ const comp = () => {
     
 }   
 
-const play = (RBS, comp) => {   
-let win = document.getElementById("winner");
-    if(RBS === comp) {
-    win.innerHTML = "And the winner is: both!!!"        
-    } 
-    if(RBS === "rock" && comp === "scissors") {
-        win.innerHTML = "And the winner is: You!"
-    } else {
-        win.innerHTML = "And the winner is: Computer..."
-    } if(RBS === "paper" && comp === "rock") {
-        win.innerHTML = "And the winner is: You!"
-    } else {
-        win.innerHTML = "And the winner is: Computer..."
-    } if(RBS === "scissors" && comp === "paper") {
-        win.innerHTML = "And the winner is: You!"
-    } else {
-        win.innerHTML = "And the winner is: Computer..."
+const play = (myva, comp) => {
+    let win = document.getElementById("winner");
+
+    if (myva === comp) {
+        win.innerHTML = "And the winner is: both!!!";
     }
-}
+    if (myva === 'rock') {
+      if (comp === 'paper') {
+        win.innerHTML = "And the winner is: Computer...";
+      } else {
+        win.innerHTML = "And the winner is: You!";
+      }
+    }
+    if (myva === 'paper') {
+      if (comp === 'scissor') {
+        win.innerHTML = "And the winner is: Computer...";
+      } else {
+        win.innerHTML = "And the winner is: You!";
+      }
+    }
+    if (myva === 'scissor') {
+      if (comp === 'rock') {
+        win.innerHTML = "And the winner is: Computer...";
+      } else {
+        win.innerHTML = "And the winner is: You!";
+      }
+    }
+  }
+
+// const play = (RBS, comp) => {   
+// let win = document.getElementById("winner");
+//     if(RBS === comp) {
+//     win.innerHTML = "And the winner is: both!!!"        
+//     } 
+//     if(RBS === "rock" && comp === "scissors") {
+//         win.innerHTML = "And the winner is: You!"
+//     } else {
+//         win.innerHTML = "And the winner is: Computer..."
+//     } if(RBS === "paper" && comp === "rock") {
+//         win.innerHTML = "And the winner is: You!"
+//     } else {
+//         win.innerHTML = "And the winner is: Computer..."
+//     } if(RBS === "scissors" && comp === "paper") {
+//         win.innerHTML = "And the winner is: You!"
+//     } else {
+//         win.innerHTML = "And the winner is: Computer..."
+//     }
+// }
