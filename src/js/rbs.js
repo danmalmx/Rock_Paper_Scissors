@@ -8,6 +8,7 @@ const RBS = () =>  {
     } else if(myva === "scissors") {
         img.innerHTML = "<img src='img/scissor.png'>"
     }
+
     setTimeout(comp, 1000); 
 }
 
@@ -31,19 +32,19 @@ const comp = () => {
 const play = (RBS, comp) => {   
 let win = document.getElementById("winner");
     if(RBS === comp) {
-        win.innerHTML = "And the winner is: both!!!"        
+    win.innerHTML = "And the winner is: both!!!"        
     } 
     if(RBS === "rock" && comp === "scissors") {
         win.innerHTML = "And the winner is: You!"
-        } else {
-            win.innerHTML = "And the winner is: Computer..."
+    } else {
+        win.innerHTML = "And the winner is: Computer..."
     } if(RBS === "paper" && comp === "rock") {
         win.innerHTML = "And the winner is: You!"
-        } else {
-            win.innerHTML = "And the winner is: Computer..."
-    } if(RBS === "scissor" && comp === "paper") {
+    } else {
+        win.innerHTML = "And the winner is: Computer..."
+    } if(RBS === "scissors" && comp === "paper") {
         win.innerHTML = "And the winner is: You!"
-        } else {
-            win.innerHTML = "And the winner is: Computer..."
+    } else {
+        win.innerHTML = "And the winner is: Computer..."
     }
 }
