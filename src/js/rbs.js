@@ -9,7 +9,7 @@ const RBS = () =>  {
         img.innerHTML = "<img src='img/scissor.png'>"
     }
 
-    setTimeout(comp, 1000); 
+    // setTimeout(comp, 1000); 
 }
 
 const comp = () => {
@@ -24,39 +24,45 @@ const comp = () => {
     } else if(comp === "scissors") {
         pic.innerHTML = "<img src='img/scissor.png'>"
     }
-
-    setTimeout(play, 500); 
-    
+    // setTimeout(determineWinner, 500); 
 }   
-
-const play = (myva, comp) => {
-    let win = document.getElementById("winner");
-
-    if (myva === comp) {
-        win.innerHTML = "And the winner is: both!!!";
+const determineWinner = (myva, comp) => {
+    if (myvax === compx) {
+      return 'Game was a tie';
     }
-    if (myva === 'rock') {
-      if (comp === 'paper') {
-        win.innerHTML = "And the winner is: Computer...";
+    if (myvax === 'rock') {
+      if (compx === 'paper') {
+        return 'Computer wins';
       } else {
-        win.innerHTML = "And the winner is: You!";
+        return 'You win!';
       }
     }
-    if (myva === 'paper') {
-      if (comp === 'scissor') {
-        win.innerHTML = "And the winner is: Computer...";
+    if (myvax === 'paper') {
+      if (compx === 'scissor') {
+        return 'Computer wins';
       } else {
-        win.innerHTML = "And the winner is: You!";
+        return 'You win!';
       }
     }
-    if (myva === 'scissor') {
-      if (comp === 'rock') {
-        win.innerHTML = "And the winner is: Computer...";
+    if (myvax === 'scissor') {
+      if (compx === 'rock') {
+        return 'Computer wins';
       } else {
-        win.innerHTML = "And the winner is: You!";
+        return 'You win!';
       }
-    }
+    } 
+    // setTimeout(determineWinner, 100); 
   }
+  
+  const playGame = () => {
+    const myvax = getUserChoice('rock');
+      const compx = getComputerChoice();
+      console.log(`You threw: ${myvax}`)
+    console.log(`The computer threw: ${compx}`);
+    console.log(determineWinner(myvax, compx));
+  };
+  
+  playGame();
 
 // const play = (RBS, comp) => {   
 // let win = document.getElementById("winner");
