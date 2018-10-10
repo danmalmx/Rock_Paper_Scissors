@@ -9,10 +9,10 @@ const RBS = () =>  {
         img.innerHTML = "<img src='img/scissor.png'>"
     }
 
-    // setTimeout(comp, 1000); 
+    setTimeout(computer, 1000); 
 }
 
-const comp = () => {
+const computer = () => {
     window.onload
     let cova = ['rock', 'paper', 'scissors'];
     let comp = cova[Math.floor(Math.random() * cova.length)]; 
@@ -24,45 +24,44 @@ const comp = () => {
     } else if(comp === "scissors") {
         pic.innerHTML = "<img src='img/scissor.png'>"
     }
-    // setTimeout(determineWinner, 500); 
+    
+    setTimeout(compare, 500); 
 }   
-const determineWinner = (myva, comp) => {
-    if (myvax === compx) {
-      return 'Game was a tie';
+
+var compare = function(myva, comp) {
+    let win = document.getElementById("winner");
+
+    if(myva === comp) {
+        win.innerHTML = "And the winner is: both!!!";
     }
-    if (myvax === 'rock') {
-      if (compx === 'paper') {
-        return 'Computer wins';
-      } else {
-        return 'You win!';
-      }
+
+    if(myva === "rock") {
+        if(comp === "scissors") {
+            win.innerHTML = "And the winner is: You!";
+        }
+        else {
+            win.innerHTML = "And the winner is: Computer...";
+        }
     }
-    if (myvax === 'paper') {
-      if (compx === 'scissor') {
-        return 'Computer wins';
-      } else {
-        return 'You win!';
-      }
+    
+    if(myva === "scissors") {
+        if(comp === "paper") {
+            win.innerHTML = "And the winner is: You!";
+        }
+        else {
+            win.innerHTML = "And the winner is: Computer...";
+        }
     }
-    if (myvax === 'scissor') {
-      if (compx === 'rock') {
-        return 'Computer wins';
-      } else {
-        return 'You win!';
-      }
-    } 
-    // setTimeout(determineWinner, 100); 
-  }
-  
-  const playGame = () => {
-    const myvax = getUserChoice('rock');
-      const compx = getComputerChoice();
-      console.log(`You threw: ${myvax}`)
-    console.log(`The computer threw: ${compx}`);
-    console.log(determineWinner(myvax, compx));
-  };
-  
-  playGame();
+
+    if(myva === "paper") {
+        if(comp === "rock") {
+            win.innerHTML = "And the winner is: You!";
+        }
+        else {
+            win.innerHTML = "And the winner is: Computer...";
+        }
+    }
+};
 
 // const play = (RBS, comp) => {   
 // let win = document.getElementById("winner");
