@@ -1,5 +1,4 @@
 const RBS = () =>  {
-    window.onload
     let myva = document.getElementById("myChoice").value
     let img = document.getElementById("mchoice");   
     if(myva === "rock") {
@@ -10,13 +9,12 @@ const RBS = () =>  {
         img.innerHTML = "<img src='img/scissor.png'>"
     }
 
-    setTimeout(computer, 1000); 
+    // setTimeout(computer, 1000); 
 }
 
 const computer = () => {
-    window.onload
     let cova = ['rock', 'paper', 'scissors'];
-    window.comp = cova[Math.floor(Math.random() * cova.length)]; 
+    let comp = cova[Math.floor(Math.random() * cova.length)]; 
     let pic = document.getElementById("cchoice")
     if(comp === "rock") {
         pic.innerHTML = "<img src='img/rock.png'>"
@@ -26,8 +24,10 @@ const computer = () => {
         pic.innerHTML = "<img src='img/scissor.png'>"
     }
     
-    setTimeout(play, 500); 
+    // setTimeout(play, 500); 
 }   
+
+let comCho = computer();
 
 // var compare = function (myva, comp) {
 //     if(myva === comp) 
@@ -85,21 +85,20 @@ const computer = () => {
 //     }
 // };
 
-const play = (myva, comp) => {   
-    window.onload
+const play = (RBA, comCho) => {   
     let win = document.getElementById("winner");
-    if(myva === comp) {
+    if(RBA === comCho) {
     win.innerHTML = "And the winner is: both!!!"        
     } 
-    if(myva === "rock" && comp === "scissors") {
+    if(RBA === "rock" && comCho === "scissors") {
         win.innerHTML = "And the winner is: You!"
     } else {
         win.innerHTML = "And the winner is: Computer..."
-    } if(myva === "paper" && comp === "rock") {
+    } if(RBA === "paper" && comCho === "rock") {
         win.innerHTML = "And the winner is: You!"
     } else {
         win.innerHTML = "And the winner is: Computer..."
-    } if(myva === "scissors" && comp === "paper") {
+    } if(RBA === "scissors" && comCho === "paper") {
         win.innerHTML = "And the winner is: You!"
     } else {
         win.innerHTML = "And the winner is: Computer..."
