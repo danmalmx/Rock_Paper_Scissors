@@ -18,72 +18,19 @@ const computer = () => {
     let pic = document.getElementById("cchoice")
     if(comp === "rock") {
         pic.innerHTML = "<img src='img/rock.png'>"
+        return "rock"
     } else if(comp === "paper") {
         pic.innerHTML = "<img src='img/paper.png'>"
+        return "paper"
     } else if(comp === "scissors") {
         pic.innerHTML = "<img src='img/scissor.png'>"
+        return "scissors"
     }
     
     // setTimeout(play, 500); 
 }   
 
 let comCho = computer();
-
-// var compare = function (myva, comp) {
-//     if(myva === comp) 
-//     {console.log("The result is a tie!");}
-    
-//     else if(myva === "rock") 
-//         if (comp === "scissors") 
-//         {console.log("rock wins");}
-//         else 
-//         {console.log "paper wins";}
-//     else if (myva === "paper")
-//         if (comp === "rock")
-//         {console.log("paper wins");}
-//         else
-//         {console.log("scissors wins");}
-//     else if (myva === "scissors")
-//         if (comp === "rock")
-//         {console.log("rock wins");}
-//         else
-//         {console.log("scissors wins");}
-//      };
-
-// var compare = function(myva, comp) {
-//     let win = document.getElementById("winner");
-
-//     if(myva === comp) {
-//         win.innerHTML = "And the winner is: both!!!";
-//     }
-
-//     if(myva === "rock") {
-//         if(comp === "scissors") {
-//             win.innerHTML = "And the winner is: You!";
-//         }
-//         else {
-//             win.innerHTML = "And the winner is: Computer...";
-//         }
-//     }
-
-//     if(myva === "scissors") {
-//         if(comp === "paper") {
-//             win.innerHTML = "And the winner is: You!";
-//         }
-//         else {
-//             win.innerHTML = "And the winner is: Computer...";
-//         }
-//     }
-
-//     if(myva === "paper") {
-//         if(comp === "rock") {
-//             win.innerHTML = "And the winner is: You!";
-//         }
-//         else {
-//             win.innerHTML = "And the winner is: Computer...";
-//         }
-//     }
-// };
 
 const play = (RBA, comCho) => {   
     let win = document.getElementById("winner");
