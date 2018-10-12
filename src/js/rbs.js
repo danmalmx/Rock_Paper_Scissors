@@ -29,58 +29,31 @@ const computer = () => {
 setTimeout(compare, 500); 
 }
 
-var computerChoice = computer();
+let compx = computer();
 
-function compare() { 
-    if (user.toUpperCase() === "ROCK" && computerChoice.toUpperCase() === "SCISSOR" ) {
-      return user + " wins vs " + computerChoice + ". Congratulations!";
-    } else if (user.toUpperCase() === "SCISSOR" && computerChoice.toUpperCase() === "PAPER") {
-      return user + " wins vs " + computerChoice + ". Congratulations!";
-    } else if (user.toUpperCase() === "PAPER" && computerChoice.toUpperCase() === "ROCK") {
-      return user + " wins vs " + computerChoice + ". Congratulations!";
-    } else if( user.toUpperCase() === "PAPER" && computerChoice.toUpperCase() === "SCISSOR" ) {
-      return user + " loses vs " + computerChoice + ". Try again";
-    } else if (user.toUpperCase() === "ROCK" && computerChoice.toUpperCase() === "PAPER") {
-      return user + " loses vs " + computerChoice + ". Try again";
-    } else if (user.toUpperCase() === "SCISSOR" && computerChoice.toUpperCase() === "ROCK") {
-      return user + " loses vs " + computerChoice + ". Try again!";
-    } else if (user.toUpperCase() === "PAPER" && computerChoice.toUpperCase() === "PAPER") {
-      return "Its a draw. Try again";
-    } else if (user.toUpperCase() === "ROCK" && computerChoice.toUpperCase() === "ROCK") {
-      return "Its a draw. Try again";
-    } else if (user.toUpperCase() === "SCISSOR" && computerChoice.toUpperCase() === "SCISSOR") {
-      return "Its a draw. Try again";
+const play = (myva, compx) => {   
+    let win = document.getElementById("winner");
+
+    if(myva === "rock" && compx === "rock") {
+        win.innerHTML = "And the winner is: both!!!"        
+    } 
+    if(myva === "paper" && compx === "paper") {
+        win.innerHTML = "And the winner is: both!!!"        
+    } 
+    if(myva === "scissors" && compx === "scissors") {
+        win.innerHTML = "And the winner is: both!!!"        
+    } 
+    if(myva === "rock" && compx === "scissors") {
+        win.innerHTML = "And the winner is: You!"
     } else {
-      return "None selected"; 
+        win.innerHTML = "And the winner is: Computer..."
+    } if(myva === "paper" && compx === "rock") {
+        win.innerHTML = "And the winner is: You!"
+    } else {
+        win.innerHTML = "And the winner is: Computer..."
+    } if(myva === "scissors" && compx === "paper") {
+        win.innerHTML = "And the winner is: You!"
+    } else {
+        win.innerHTML = "And the winner is: Computer..."
     }
-  }
-  
-
-// let compx = computer();
-
-// const play = (myva, compx) => {   
-//     let win = document.getElementById("winner");
-
-//     if(myva === "rock" && compx === "rock") {
-//         win.innerHTML = "And the winner is: both!!!"        
-//     } 
-//     if(myva === "paper" && compx === "paper") {
-//         win.innerHTML = "And the winner is: both!!!"        
-//     } 
-//     if(myva === "scissors" && compx === "scissors") {
-//         win.innerHTML = "And the winner is: both!!!"        
-//     } 
-//     if(myva === "rock" && compx === "scissors") {
-//         win.innerHTML = "And the winner is: You!"
-//     } else {
-//         win.innerHTML = "And the winner is: Computer..."
-//     } if(myva === "paper" && compx === "rock") {
-//         win.innerHTML = "And the winner is: You!"
-//     } else {
-//         win.innerHTML = "And the winner is: Computer..."
-//     } if(myva === "scissors" && compx === "paper") {
-//         win.innerHTML = "And the winner is: You!"
-//     } else {
-//         win.innerHTML = "And the winner is: Computer..."
-//     }
-// }
+}
